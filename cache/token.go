@@ -17,10 +17,6 @@ var (
 	TokenStatic = new(tokenStatic)
 )
 
-const (
-	key = "xx_key"
-)
-
 func GetTokenKey(k string) string {
 	return fmt.Sprintf("%s:%s", global.Config.RedisPrefix, k)
 }

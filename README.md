@@ -34,9 +34,3 @@ Gin CRUD framework
 ## Docker Run Worker
     docker run -it --network="host" venus-tag "/app/worker -conf.ini /app/setting/conf.dev.ini"
     docker run -it --network="host" venus-tag "/app/srv -conf.ini /app/setting/conf.dev.ini"
-
-## Todo
-- [ ] Task Unit Test
-- [ ] Middleware Unit Test
-- [ ] API Doc HTTP Status Code Detail
-- [ ] Http Error Handler
