@@ -1,0 +1,30 @@
+# For Test
+version: "3"
+services:
+  mysql:
+    image: mysql
+    restart: always
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    network_mode: "host"
+
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - '6379:6379'
+    network_mode: "host"
+
+  golang-test:
+    image: golang:alpine
+    environment:
+      - CGO_ENABLED=0
+    depends_on:
+      - mysql
+      - redis
+    network_mode: "host"
+    volumes:
+      - $PWD:/home
+    working_dir: /home
