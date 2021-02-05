@@ -6,7 +6,7 @@ import (
 	"github.com/gomodule/redigo/redis"
 
 	jobintf "venus/job/intf"
-	"venus/pkg/kdb/venus"
+	"venus/pkg/venus"
 	"venus/setting"
 )
 

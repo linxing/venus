@@ -1,7 +1,7 @@
 package venus
 
 import (
-	pb "venus/pkg/kdb/venus"
+	pb "venus/pkg/venus"
 	"venus/service/connection/grpc"
 )
 

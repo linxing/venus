@@ -271,7 +271,7 @@ func (*userStatic) GetByRoleID(ctx context.Context, roleID int64) (*User, error)
 	return nil, nil
 }
 
-func (*userStatic) GetByDepartmentD(ctx context.Context, departmentID int64) (*User, error) {
+func (*userStatic) GetByDepartmentID(ctx context.Context, departmentID int64) (*User, error) {
 
 	session := GetSession(ctx)
 	defer session.Close()

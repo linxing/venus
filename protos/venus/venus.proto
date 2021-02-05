@@ -2,41 +2,16 @@ syntax = "proto3";
 
 package venus;
 
-option go_package = "kdb/venus";
+option go_package = "/venus";
 
 message HelloRequest {
     string name = 1;
 }
 
 message HelloResponse {
-    string name = 1;
-}
-
-message NotifyPhoneCallStatusRequest{
-    string session_id = 1;
-    string callee = 2;
-    string caller = 3;
-    string record_url = 4;
-    int64 duration = 5;
-    int64 start_at_sec = 6;
-    int64 end_at_sec = 7;
-}
-
-message NotifyPhoneCallStatusResponse{
-}
-
-message MakePhoneCallRequest{
-    string callee = 1;
-    string caller = 2;
-}
-
-message MakePhoneCallResponse{
-    string session_id = 1;
-    bool status = 2;
+    string result = 1;
 }
 
 service VenusService {
     rpc Hello(HelloRequest) returns (HelloResponse);
-    rpc NotifyPhoneCallStatus(NotifyPhoneCallStatusRequest) returns (NotifyPhoneCallStatusResponse);
-    rpc MakePhoneCall(MakePhoneCallRequest) returns (MakePhoneCallResponse);
 }
